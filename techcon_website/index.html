@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechCon 2024 - Conference Website</title>
+  <meta charset="utf-8">
+  <title>TechCon 2024 - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* Reset some default styles */
     * {
       margin: 0;
       padding: 0;
@@ -15,19 +14,16 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       color: #333;
+      padding: 0 1rem;
     }
 
     header {
-      background-color: #0d47a1;
-      color: #fff;
-      padding: 1rem 2rem;
+      background: #002244;
+      color: white;
+      padding: 1rem 0;
       text-align: center;
-    }
-
-    header h1 {
-      margin-bottom: 0.5rem;
     }
 
     nav ul {
@@ -35,142 +31,103 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 0;
+      gap: 1rem;
     }
 
-    nav ul li {
-      margin: 0.5rem;
-    }
-
-    nav a {
-      color: #fff;
+    nav ul li a {
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      padding: 0.5rem 1rem;
-      background-color: #1976d2;
-      border-radius: 5px;
-      transition: background 0.3s;
     }
 
-    nav a:hover {
-      background-color: #1565c0;
+    nav ul li a:hover {
+      text-decoration: underline;
     }
 
     main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 900px;
+      margin: 2rem auto;
     }
 
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
-    section h2 {
-      margin-bottom: 1rem;
-      color: #0d47a1;
-    }
-
-    video {
+    iframe {
       width: 100%;
-      max-width: 700px;
-      height: auto;
-      display: block;
-      margin: 1rem auto;
-      border: 2px solid #0d47a1;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .video-description {
+      text-align: center;
+      font-size: 1rem;
+      color: #444;
+      margin-top: 0.5rem;
     }
 
     footer {
-      background-color: #0d47a1;
+      background: #002244;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
         align-items: center;
       }
 
-      nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin: 0.2rem 0;
+      iframe {
+        height: 250px;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>TechCon 2024</h1>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#register">Register</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About TechCon</h2>
-      <p>TechCon 2024 is a premier technology conference bringing together innovators, developers, and leaders from across the globe to share insights, explore new trends, and build the future together.</p>
-      <video controls>
-        <source src="promo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <section id="intro">
+      <h2>Welcome to TechCon 2024</h2>
+      <p>
+        TechCon 2024 brings together technology enthusiasts, industry leaders, and visionaries
+        for a three-day experience filled with innovation, networking, and hands-on learning.
+        Join us as we explore the future of tech across AI, web development, cybersecurity,
+        and more.
+      </p>
     </section>
 
-    <section id="schedule">
-      <h2>Schedule</h2>
-      <ul>
-        <li><strong>Day 1:</strong> Keynote speeches, Workshops</li>
-        <li><strong>Day 2:</strong> Panel Discussions, Networking Events</li>
-        <li><strong>Day 3:</strong> Hackathon, Closing Ceremony</li>
-      </ul>
-    </section>
-
-    <section id="register">
-      <h2>Register</h2>
-      <p>Don't miss out! Secure your spot at TechCon 2024 by registering below:</p>
-      <form action="#" method="post">
-        <label for="name">Full Name:</label><br />
-        <input type="text" id="name" name="name" required /><br /><br />
-
-        <label for="email">Email Address:</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
-
-        <label for="ticket">Ticket Type:</label><br />
-        <select id="ticket" name="ticket">
-          <option value="general">General Admission</option>
-          <option value="vip">VIP</option>
-          <option value="student">Student</option>
-        </select><br /><br />
-
-        <input type="submit" value="Register Now" />
-      </form>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>For more information or inquiries, reach out to us:</p>
-      <ul>
-        <li>Email: <a href="mailto:info@techcon2024.com">info@techcon2024.com</a></li>
-        <li>Phone: +1-234-567-8900</li>
-        <li>Follow us on <a href="https://twitter.com" target="_blank">Twitter</a> and <a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-      </ul>
+    <section id="promo-video">
+      <h2>Watch the TechCon 2024 Promo</h2>
+      <iframe 
+        src="https://www.youtube.com/embed/u_qFlTu7HTw" 
+        title="TechCon 2024 Promo Video" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      <p class="video-description">
+        This video highlights the key themes, speakers, and innovation sessions of TechCon 2024.
+        Watch to get a sneak peek into what’s coming this year!
+      </p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2024 TechCon. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
